@@ -1,0 +1,15 @@
+.basket {
+	padding: 41px 40px 0px;
+	border-bottom: 1px solid $borderColor;
+
+	&__title {
+		@media (min-width: $desktop) {
+			margin-bottom: 30px;
+		}
+
+		&_empty {
+			opacity: 0;
+			transition: opacity $default-transition-duration $default-transition-function;
+		}
+	}
+}

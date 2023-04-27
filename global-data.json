@@ -1,0 +1,16 @@
+{
+	"products": [
+		{
+			"name": "Amet minim mollit non deserunt ullamco est sit",
+			"image": "jacket_01.png",
+			"count": "1",
+			"price": "525"
+		},
+		{
+			"name": "Amet minim mollit non",
+			"image": "sneakers_01.png",
+			"count": "1",
+			"price": "525"
+		}
+	]
+}

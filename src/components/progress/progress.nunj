@@ -1,0 +1,33 @@
+{% macro progress(page = 3, className) %}
+  <div class='progress-bar {% if className %}{{className}}{% endif %}'>
+    <div class='progress-bar__row'>
+      {% for i in range(1, 5) %}
+        <div class='progress-bar__step progress-bar__step{% if  i < page %}_passed
+              {% elseif i > page %}_inactive
+              {% else %}_active
+              {% endif %}
+              '>
+          <span class="progress-bar__step-number">
+            {{ i }}
+          </span>
+          <div class="progress-bar__step-name">
+            {% if i == 1 %}
+              Account
+            {% elseif i == 2 %}
+              Shipping
+            {% elseif i == 3 %}
+              Billing
+            {% elseif i == 4 %}
+              Review
+            {% endif %}
+          </div>
+        </div>
+        {% if i < page %}
+          <div class="progress-bar__line progress-bar__line_filled"></div>
+        {% elseif i < 4 %}
+          <div class="progress-bar__line progress-bar__line_not-filled"></div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+{% endmacro %}

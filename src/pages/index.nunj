@@ -1,0 +1,18 @@
+{% extends "../templates/base.nunj" %}
+
+{% from "../components/icon/icon.nunj" import icon %}
+{% from "../components/button/button.nunj" import button %}
+
+{% block content %}
+	<header>
+		{% include '../includes/header/header.nunj' %}
+	</header>
+	<div class='main-container'>
+		<main class='main-container__main'>
+			{% include '../includes/main/main.nunj' %}
+		</main>
+		<aside class='main-container__aside'>
+			{% include '../includes/aside/aside.nunj' %}
+		</aside>
+	</div>
+{% endblock %}

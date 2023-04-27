@@ -1,0 +1,44 @@
+.promo {
+	overflow: hidden;
+	transition: max-height 0.4s ease;
+
+	&__container {
+		@media (min-width: $desktop) {
+			width: 100%;
+			padding: 41px 40px 39px;
+			border-bottom: 1px solid $borderColor;
+		}
+	}
+
+	&__title {
+		margin-bottom: 30px;
+	}
+
+	&__form {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: center;
+		gap: 10px;
+
+		@media (min-width: $desktop) {
+			width: 100%;
+		}
+	}
+
+	&__input {
+		flex: 1 1 auto;
+	}
+
+	&__submit {
+		flex: 0 0 95px;
+		border: none;
+		background-color: $primaryColor;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #053ce0;
+			}
+		}
+	}
+}

@@ -1,0 +1,5 @@
+<div class='aside'>
+  {% include '../basket/basket.nunj' %}
+  {% include '../promo-code/promo-code.nunj' %}
+  {% include '../total-price/total-price.nunj' %}
+</div>

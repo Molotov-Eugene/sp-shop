@@ -1,0 +1,32 @@
+<nav class="header">
+	<div class="header__row">
+		<a href="/" class="header__logo" title="Home page">
+			{{ icon({
+					iconName: 'logo',
+					className: 'header__logo-svg'
+			}) }}
+		</a>
+		<div class='header__empty-space'>
+		</div>
+		<div class='header__search-btn'>
+			{{ icon({
+					iconName: 'search',
+					className: 'header__search-btn-svg'
+			}) }}
+		</div>
+		<div class='header__cart-btn'>
+			{{ icon({
+					iconName: 'cart',
+					className: 'header__cart-btn-svg'
+			}) }}
+			<div class='header__cart-info'>
+				<span class='header__cart-info-count'>2</span>
+			</div>
+		</div>
+		<div class='header__menu'>
+			<span class="header__menu-line header__menu-line-top"></span>
+			<span class="header__menu-line"></span>
+			<span class="header__menu-line header__menu-line-bottom"></span>
+		</div>
+	</div>
+</nav>

@@ -1,0 +1,11 @@
+{% macro button(props) %}
+	{% if props.type == 'submit' %}
+		<button type="submit" class="button button__submit {% if props.className %}{{ props.className }}{% endif %}">
+			<span class="button__text">{{ props.children }}</span>
+		</button>
+	{% elseif props.type == 'link' %}
+		<a href="{% if props.href %} {{ props.href }} {% else %}#{% endif %}" class="button button__link {% if props.className %}{{ props.className }}{% endif %}">
+			<span class="button__text">{{ props.children }}</span>
+		</a>
+	{% endif %} 
+{% endmacro %}

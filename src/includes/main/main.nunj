@@ -1,0 +1,6 @@
+{% from '../../components/progress/progress.nunj' import progress %}
+
+<div class='main'>
+  {{ progress(className = 'main__progress-bar') }}
+  {% include '../billing/billing.nunj' %}
+</div>

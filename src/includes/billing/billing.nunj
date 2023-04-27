@@ -1,0 +1,84 @@
+<div class='billing'>
+    <h1 class='billing__title title'>Billing Information</h1>
+    <div class='billing__payment-methods'>
+        <div class='billing__method billing__method_selected'>
+            <div class='billing__method-checkbox'></div>
+            <div class='billing__method-name'>Pay with Credit Card</div>
+        </div>
+        <div class='billing__method'>
+            <div class='billing__method-checkbox'></div>
+            <div class='billing__method-name'>
+                {{ icon({
+                    iconName: 'paypal',
+                    className: 'billing__method-svg'
+                }) }}
+            </div>
+        </div>
+    </div>
+    <div class='billing__form-container'>
+        <form class='billing__form' action='#' method='POST'>
+            <fieldset name='cardData' class='billing__inputs'>
+                <label class='billing__form-label'>
+                    <div class='billing__form-label-text'>
+                        Name on card
+                    </div>
+                    <input class='billing__form-input input' type='text' name='cardName' required placeholder='Placeholder Text'>
+                </label>
+                <div class='billing__card-number'>
+                    <label class='billing__form-label billing__form-label_number'>
+                        <div class='billing__form-label-text'>
+                           Card number
+                        </div>
+                        <input class='billing__form-input input' type='number' name='cardNumber1' maxlength'4' =required>
+                    </label>
+                    <input class='billing__form-input billing__form-input_number input' type='number' name='cardNumber2' maxlength'4' required>
+                    <input class='billing__form-input billing__form-input_number input' type='number' name='cardNumber3' maxlength'4' required>
+                    <input class='billing__form-input billing__form-input_number input' type='number' name='cardNumber4' maxlength'4' required>
+                </div>
+                <div class='billing__card-expire-cvv'>
+                    <label class='billing__form-label billing__form-label_expire-cvv'>
+                        <div class='billing__form-label-text'>
+                           Expire date
+                        </div>
+                        <input class='billing__form-input input' type='text' name='carddate' required>
+                    </label>
+                    <label class='billing__form-label billing__form-label_expire-cvv'>
+                        <div class='billing__form-label-text billing__form-label-text_expire-cvv'>
+                           <span>CVV code</span>
+                            <span class='billing__form-help'>?</span>
+                        </div>
+                        <input class='billing__form-input input' type='number' name='cvv' maxlength'3' required>
+                    </label>
+                </div>  
+            </fieldset>
+            <label class='billing__checkbox-line'>
+                    <input type='checkbox' class='billing__checkbox-input' name='save' checked> 
+                    <div class='billing__checkbox'></div>
+                    <div class='billing__checkbox-text'>
+                        Save information of this credit card
+                    </div>
+            </label>
+            <label class='billing__checkbox-line'>
+                    <input type='checkbox' class='billing__checkbox-input' name='accept' required> 
+                    <div class='billing__checkbox'></div>
+                    <div class='billing__checkbox-text'>
+                        I accept the <a href='#' class='billing__link-text'>terms
+                        and conditions</a> and the <a href='#' class='billing__link-text'>Privacy Policies</a>
+                    </div>
+            </label>
+            <div class='billing__buttons'>
+                {{ button({
+                    type: 'link',
+                    href:'#',
+                    className: 'billing__back',
+                    children: 'Back'
+                }) }}
+                {{ button({
+                    type: 'submit',
+                    className: 'billing__submit',
+                    children: 'Check Out'
+                }) }}
+            </div>
+        </form>
+    </div>
+</div>
