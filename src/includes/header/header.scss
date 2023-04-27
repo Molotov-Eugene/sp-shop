@@ -118,7 +118,7 @@
 		height: 22px;
 		transform: translateY(2px);
 		cursor: pointer;
-	
+
 		@media (min-width: $desktop) {
 			display: none;
 		}
@@ -133,27 +133,27 @@
 		background-color: $primaryTextColor;
 		pointer-events: none;
 		transition: all 0.3s ease;
-	
+
 		.header__menu_active & {
 			transform: scale(0);
 		}
-	
+
 		&-top {
 			transform: translateY(-10px) rotate(0deg);
-	
+
 			.header__menu_active & {
 				transform: translateY(0px) rotate(-45deg);
 			}
 		}
-	
+
 		&-bottom {
 			transform: translateY(10px) rotate(0deg);
-	
+
 			.header__menu_active & {
 				transform: translateY(0px) rotate(45deg);
 			}
 		}
-	
+
 		@media (any-hover: hover) {
 			.header__menu:hover & {
 				background-color: $primaryColor;
